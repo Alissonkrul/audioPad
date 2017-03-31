@@ -33,8 +33,6 @@ module.exports = function(config) {
       'bower_components/angular-notify/dist/angular-notify.js',
       'bower_components/angular-http-loader/app/package/js/angular-http-loader.min.js',
       'bower_components/angular-hotkeys/build/hotkeys.js',
-      'bower_components/humanize-duration/humanize-duration.js',
-      'bower_components/angular-timer/dist/angular-timer.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/modules/**/*.test.js"

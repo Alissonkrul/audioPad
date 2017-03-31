@@ -5,78 +5,41 @@ angular.module('audioPad')
 apiCommunicationService.$inject = ['$http', 'CurrentStateService', 'config'];
 
 function apiCommunicationService($http, CurrentStateService, config) {
-  var endpoint = config.endpoint;
+  var endpoint = config.online_db;
+  var offEndpoint = config.offline_db;
 
 
-  this.getMetaData = function (jwt) {
-    var url = endpoint + '/me';
+  this.getData = function () {
+    var url = endpoint + '/data';
     return $http.get(url)
       .then(function (response) {
         return response.data;
       });
   };
 
-  this.postTestTemplate = function (testTemplate, params) {
-    var url = endpoint + '/templates';
-    return $http({
-      url: url,
-      method: 'POST',
-      data: testTemplate,
-      params: params
-    });
-  };
-
-  this.getQuestions = function (params) {
-    var url = endpoint + '/questions';
-
-    params.navFilter = CurrentStateService.questionParams.navFilter;
-    CurrentStateService.lastParams = params;
-
-    return $http.get(url, {params: params})
+  this.saveData = function (data) {
+    var url = endpoint + '/data';
+    return $http.put(url, data)
       .then(function (response) {
         return response.data;
       });
   };
 
-  this.setAnswer = function (body, params) {
-    var url = endpoint + '/answers';
-    return $http({
-      url: url,
-      method: "POST",
-      data: body,
-      params: params
-    });
+  this.getOffData = function () {
+    var url = offEndpoint;
+    return $http.get(url)
+      .then(function (response) {
+        return response.data;
+      });
   };
 
-  this.resetAnswers = function (params) {
-    ///answers?memberUID=11074&testUID=1823819
-    var url = endpoint + '/answers';
-    return $http({
-      url: url,
-      method: 'DELETE',
-      params: params
-    });
+  this.saveOffData = function (data) {
+    var url = offEndpoint;
+    return $http.put(url, data)
+      .then(function (response) {
+        return response.data;
+      });
   };
 
-  this.resetWrongAnswers = function (params) {
-    ///answers?memberUID=11074&testUID=1823819
-    var url = endpoint + '/resetWrongAnswers';
-    return $http({
-      url: url,
-      method: 'PUT',
-      params: params
-    });
-  };
 
-  this.finishTest = function (memberUID) {
-    var url = endpoint + '/testDone';
-    return $http({
-      url: url,
-      method: 'POST',
-      params: {
-        testUID: CurrentStateService.questionParams.testUID,
-        memberUID: memberUID
-      }
-    })
-  }
 }
