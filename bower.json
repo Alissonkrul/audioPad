@@ -1,0 +1,33 @@
+{
+  "name": "audioPad-frontend",
+  "version": "0.0.0",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "angular": "^1.6.0",
+    "angular-bootstrap": "^1.2.5",
+    "bootstrap": "~3.3.6",
+    "angular-momentjs": "^0.2.2",
+    "components-font-awesome": "~4.5.0",
+    "angular-ui-router": "^0.4.2",
+    "angular-notify": "^2.5.1",
+    "angular-http-loader": "^0.1.7",
+    "angular-hotkeys": "chieffancypants/angular-hotkeys#^1.7.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0"
+  },
+  "appPath": "app",
+  "moduleName": "audioPadApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "^1.6.0"
+  }
+}

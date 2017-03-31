@@ -1,0 +1,11 @@
+{
+  "name": "@tunts/protractor-screenshot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tunts.screen.capture.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murilo <macquadros@gmail.com>",
+  "license": "ISC"
+}

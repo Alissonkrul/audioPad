@@ -1,0 +1,15 @@
+<div class="modal-header well">
+  <button type="button" class="close" aria-hidden="true" ng-click="cancel()">&times;</button>
+  <h4 class="modal-title">Delete Permanently</h4>
+</div>
+<div class="modal-body">
+  <h5>{{informationText}}</h5>
+</div>
+
+<div class="modal-footer">
+  <button first-tab-index="modalDelete" type="button" class="btn btn-default" ng-click="cancel()">Cancel
+  </button>
+  <button last-tab-index="modalDelete" type="button" class="btn btn-danger" ng-click="deleteConfirmation()"
+          ng-click="ok()">Delete
+  </button>
+</div>

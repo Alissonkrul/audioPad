@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/angular-notify/dist/angular-notify.css" />
+  <link rel="stylesheet" href="bower_components/angular-hotkeys/build/hotkeys.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body tab-index ng-app="audioPadApp">
+
+<div ui-view></div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-momentjs/angular-momentjs.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-notify/dist/angular-notify.js"></script>
+<script src="bower_components/angular-http-loader/app/package/js/angular-http-loader.min.js"></script>
+<script src="bower_components/angular-hotkeys/build/hotkeys.js"></script>
+<script src="bower_components/humanize-duration/humanize-duration.js"></script>
+<script src="bower_components/angular-timer/dist/angular-timer.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="modules/app.js"></script>
+
+<!-- yeoman -->
+<script src="modules/audioPad/module.js"></script>
+<script src="modules/audioPad/config/env.config.js"></script>
+<script src="modules/audioPad/config/routes.config.js"></script>
+<script src="modules/audioPad/factories/error.response.interceptor.js"></script>
+<script src="modules/audioPad/controllers/main.controller.js"></script>
+
+<script src="modules/audioPad/services/api.communication.service.js"></script>
+
+<script src="modules/audioPad/services/current.state.service.js"></script>
+
+
+
+<!--common module-->
+<script src="modules/common/module.js"></script>
+
+<script src="modules/common/directives/tabIndex.directive.js"></script>
+<script src="modules/common/directives/tntEnter.directive.js"></script>
+<script src="modules/common/directives/autofocus.directive.js"></script>
+<script src="modules/common/directives/usDate.directive.js"></script>
+<script src="modules/common/directives/currency.directive.js"></script>
+<script src="modules/common/directives/tntDatePicker.directive.js"></script>
+
+<script src="modules/common/services/alert.service.js"></script>
+
+<script src="modules/common/controllers/modalAlert.controller.js"></script>
+<script src="modules/common/controllers/modalConfirm.controller.js"></script>
+<script src="modules/common/controllers/modalDelete.controller.js"></script>
+<script src="modules/common/controllers/modalTwoOptions.controller.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="modal-header well">
+  <button type="button" class="close" aria-hidden="true" ng-click="cancel()">&times;</button>
+  <h4 class="modal-title">{{title}}</h4>
+</div>
+<div class="modal-body">
+  <h5>{{informationText}}</h5>
+</div>
+
+<div class="modal-footer">
+  <button  type="button" class="btn btn-default pull-left" ng-click="firstOptionAction()">
+    <b class="glyphicon glyphicon-{{firstOptionIconClass}}"></b> {{firstOptionLabel}}
+  </button>
+
+  <button type="button" class="btn btn-default pull-right" ng-click="secondOptionAction()">
+    <b class="glyphicon glyphicon-{{secondOptionIconClass}}"></b> {{secondOptionLabel}}
+  </button>
+</div>
